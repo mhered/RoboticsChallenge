@@ -4,22 +4,13 @@
 
 This month of February I will be following @JohnVial 's [28-day robotics challenge]( https://becomearoboticist.com/). The program blends ideas from [teaching sprints](https://www.teachingsprints.com/), [atomic habits](https://jamesclear.com/atomic-habits-summary), and the [build in public](https://buildinpublic.com/) manifesto. I will document the process and share daily progress updates and key learnings in this repo as well as this [twitter thread](https://x.com/aergenium/status/1888376092571967708) 
 
-I will be documenting the process in this repo:  Learn more about the program here:: https://becomearoboticist.com/  
+I will be documenting the process in this repo: https://github.com/mhered/RoboticsChallenge 
+
+Learn more about the program here:: https://becomearoboticist.com/  
 
 ## Day 0
 
 Day 0: Setting things up. The challenge's repo  provides a containerized environment very easy to setup. Leveraging WLS, docker and the Dev Containers VS Code extension eliminates the need to fiddle with dual boot, ubuntu or ROS installs version compatibility, or dependencies. 
-
-
-
-Day 0: Setting Up 🔧
-
-The repo https://github.com/johnny555/bar_ws provides a containerized environment that leverages WSL, docker, and the VS Code Dev Containers extension. Super easy to set up, and no fiddling with Ubuntu dual boot, ROS version compatibility, or dependencies.
-
-### Key learnings
-
-* cool Windows setup using Docker and Dev Containers VS Code extension shows promise 
-* great excuse for a first contact with OBS Studio 
 
 ### Sources
 
@@ -75,7 +66,12 @@ In browser, open: `http://localhost:6080/`
 
 Took actually a couple of days, played a bit with OBS Studio and made a video
 
-## Kick Off
+### Key learnings
+
+* cool Windows setup using Docker and Dev Containers VS Code extension shows promise 
+* great excuse for a first contact with OBS Studio 
+
+## Kick Off meeting
 
 Works for Nexus
 
@@ -109,19 +105,20 @@ Pearce - Engineering degree. Did robotics without ROS (was extracurricular). Doi
 
 11 pax in the cohort
 
-
-
 ## Day 1
+
+Easy start, teleop using RQT GUI and `teleop_keyboard`
 
 Key learnings: 
 
 * the idea to scan real life environments using a phone app piqued my interest
-* 
 
 ## Day 2
 
 * can open a terminal inside the docker either through the GUI with terminator or in vscode dev containers clicking on the `+`icon 
 * learnt about vcstool https://github.com/dirk-thomas/vcstool
+
+### Troubleshooting
 
 Krytn teleop task runs but the robot does not move, even though `/cmd_vel` topic has traffic. 
 
@@ -201,3 +198,49 @@ $ros2 interface show geometry_msgs/msg/TwistStamped
 More intrigued with the docker and devcontainers
 
 ![](./assets/krytn_rqt_graph.png)
+
+## Sources
+
+https://www.linkedin.com/posts/ahcorde_ros-ros2-opensource-activity-7291100454443216897-L__N
+
+Insight - a modern, user-friendly GUI for ROS 2
+
+Current GUI Features
+
+The application already supports several core functionalities for interacting with ROS2:
+
+ \- Viewing Nodes: Display detailed information about running nodes  (similar to ros2 node list and ros2 node info), including their topics,  services, and more.
+
+ \- Viewing Topics: List all topics (similar to ros2 topic list),  inspect details of specific topics (similar to ros2 topic info), and  view message definitions.
+
+ \- Viewing Services: List all services (similar to ros2 service  list), inspect specific services (similar to ros2 service info), and  view message definitions.
+
+ \- Viewing Actions: List all actions (similar to ros2 action list), inspect specific actions, and view message definitions.
+
+ \- Viewing Message Definitions: Access detailed message structures, including raw definitions. This was the first feature developed and the original motivation for creating the GUI.
+
+ \- Viewing Transformations (TFs): Visualize all coordinate frames  and calculate transformations between frames (similar to ros2 run  tf2_ros tf2_echo source_link target_link).
+
+Key GUI Features
+
+ \- Filtering: Each page includes robust filtering options for quickly finding relevant content.
+
+ \- Navigation: User-friendly navigation, no menu bar.
+
+ \- Nested Pages: Navigate through nested message definitions.
+
+ \- Copy Button: Simply press a button to copy relevant content  (like the command to execute a node, eg. ros2 run turtlesim  turtlesim_node)
+
+ \- View Online: See a message definition in the browser.
+
+ \- Open folder: Open the folder of a package.
+
+https://github.com/julianmueller/insight_gui
+
+—
+
+https://www.linkedin.com/posts/ahcorde_ros-ros2-network-activity-7288201345226919936-eufA
+
+ros_network_viz This is a utility to visualize the state of an  entire ROS 2 network in a graphical way. This utility will show all of  the nodes in a graph, all of the topics, services, and actions that  connect them, as well as some additional metadata about them.
+
+https://github.com/ros2/ros_network_viz
