@@ -1,11 +1,42 @@
 # Day02 - How Robotic Systems Communicate And How You Can Listen
 
-* can open a terminal inside the docker either through the GUI with terminator or in vscode dev containers clicking on the `+`icon 
-* learnt about vcstool https://github.com/dirk-thomas/vcstool
+## Highlights
 
-### Troubleshooting
+Day2 brushes up on basic ros2 CLI commands which came actually handy as I spent ages troubleshooting pesky issues that prevented running the Krytn teleop. In the end it had probably been me clumsily touching things from inside and outside the container who caused the problem in the first place. In the meantime, the "Hard way" (running ubuntu "baremetal", no containers) is still not working for me.
 
-Krytn teleop task runs but the robot does not move, even though `/cmd_vel` topic has traffic. 
+## Intro
+
+* Robot as system of systems: control, perception, navigation, task orchestration, each complex system with subcomponents and all must share info in real time
+* ROS as Discord for Robots: a well structured, heavily moderated chat where nodes (single purpose, unitary programs) exchange information in predefined formats, by publishing and/or subscribing to channels dedicated to specific topics
+* brushed up on basic ros2 CLI commands to explore an unfamiliar robot system: list nodes and topics, listen to a topic, graphing the system with `rqt_graph` . Beyond that: 
+
+## Linux command line crash course
+
+To open a terminal inside the docker 
+
+* In VsCode with Dev Containers : **View** -> **Terminal** or CTRL + ñ or clicking on the `+`icon 
+
+* either through the GUI with click on Terminator in the VNC GUI
+
+* A short intro to linux commands, arguments and (short hand and long hand) flags, the command prompt `<user>@<computer>:<directory>$`
+* `bash` is a programming language!
+* why both empty?
+
+```bash
+$ echo $ROS_DISTRO
+
+$ echo $IGN_GAZEBO_RESOURCE_PATH
+
+```
+
+* sourcing from outside docker in windows yields the same error message of missing folders. Note:  `.bashrc` does not source for ros jazzy and the workspace (. install/setup.bash) or set variables
+
+* learnt about `vcs` tool https://github.com/dirk-thomas/vcstool to manage version control of multiple repos (??)
+* fun futuristic command prompt: https://github.com/GitSquared/edex-ui
+
+## Troubleshooting
+
+he refreshenf on ros2 CLI commands was helpful to troubleshoot becasue Krytn teleop task runs but the robot does not move, even though `/cmd_vel` topic has traffic. 
 
 Task throws error "Failed to activate controller":
 
@@ -38,7 +69,7 @@ $ ros2 node list
 /rqt_gui_py_node_4393
 /static_transform_publisher_6yXulYBNtRWkegAo
 /twist_stamper
-$ #/diff_drive_base_controller and one additional /static_trasnform_publisher_XXX are missing!
+$ #/diff_drive_base_controller and one additional /static_transform_publisher_XXX are missing!
 
 $ros2 topic list
 [...]
@@ -73,20 +104,33 @@ Subscription count: 1
 $ 
 ```
 
+My conclusion after a couple of days struggling:
+
+- Recovered the error by running **purge** + **build** tasks iaw John in the Discord **purge** task deletes `install`and `build` folders and then **build** forces to rebuild and repopulate the folder structure inside the docker which I probably messed up calling colcon from outside the docker in the first place. 
+- Apparently the repo is symlinked so it can be accessed both from inside or outside the container, but the path is different in eahc case.  Worth trying **purge** + **build** to see if this fixes ubuntu
+- may want to add a 3s TimerAction to the `joint_state_broadcaster` spawner in `gazebo.launch.py` as proposed in the Discord by Danial Othman. 
+
+
+
+- More and more intrigued with docker and devcontainers
+
+## Important note
+
 `/twist_stamper` subscribes to Twist messages in `/cmd_vel` and translates to TwistStamped messages which it publishes on `/diff_drive_base_controller/TwistStamped`  
 
 ```bash
 $ros2 interface show geometry_msgs/msg/TwistStamped
-
 ```
 
-More intrigued with the docker and devcontainers
+## Bonus
 
-![](/home/mhered/RoboticsChallenge/assets/krytn_rqt_graph.png)
+A couple of tools beyond the old `rqt_graph` to interrogate an unfamiliar ROS2 system
 
-## Sources
+![](./assets/krytn_rqt_graph.png)
 
-https://www.linkedin.com/posts/ahcorde_ros-ros2-opensource-activity-7291100454443216897-L__N
+* https://github.com/julianmueller/insight_gui
+
+Seen here: https://www.linkedin.com/posts/ahcorde_ros-ros2-opensource-activity-7291100454443216897-L__N
 
 Insight - a modern, user-friendly GUI for ROS 2
 
@@ -120,12 +164,8 @@ Key GUI Features
 
  \- Open folder: Open the folder of a package.
 
-https://github.com/julianmueller/insight_gui
+* https://github.com/ros2/ros_network_viz
 
-—
-
-https://www.linkedin.com/posts/ahcorde_ros-ros2-network-activity-7288201345226919936-eufA
+Seen here: https://www.linkedin.com/posts/ahcorde_ros-ros2-network-activity-7288201345226919936-eufA
 
 ros_network_viz This is a utility to visualize the state of an  entire ROS 2 network in a graphical way. This utility will show all of  the nodes in a graph, all of the topics, services, and actions that  connect them, as well as some additional metadata about them.
-
-https://github.com/ros2/ros_network_viz
