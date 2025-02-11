@@ -1,0 +1,3 @@
+# Day12 - 3 Steps To Designing A Simple Gripper In CAD
+
+Content coming soon...

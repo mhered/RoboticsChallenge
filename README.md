@@ -6,241 +6,40 @@ This month of February I will be following @JohnVial 's [28-day robotics challen
 
 I will be documenting the process in this repo: https://github.com/mhered/RoboticsChallenge 
 
-Learn more about the program here:: https://becomearoboticist.com/  
+Learn more about the program here: https://becomearoboticist.com/  
+
+
+
+| Video | Day  | Title   | Highlights |
+|-------|------|---------|------------|
+| [![Image](./Day00/assets/thumbnail.jpg)](./Day00/assets/Day00.mp4) | [Day 0](./Day00/)  | [3 Ways To Get You Computer Setup With Robotics - The easy way, the hard way and the dangerous way](./Day00/README.md) | Setting things up. The [repo]([https://github.com/johnny555/bar_ws](https://t.co/zbIHhpvXrG)) provides a containerized environment super easy to setup. Leveraging WLS, docker and the Dev Containers VS Code extension eliminates the need to fiddle with dual boot, ubuntu or ROS installs version compatibility, or dependencies. |
+| [![Image](./Day01/assets/thumbnail.jpg)](./Day01/assets/Day01.mp4) | [Day 1](./Day01/)  | [The Right Way And The Wrong Way To Drive A Robot](./Day01/README.md) | Started off easy with some simple teleop in simulation. Two highlights: first, I loved the 3D-scanned real scene in Gazebo, way more immersive than your usual turtlebot tutorial. Second, I finally got the chance to test OBS Studio for video production. Check the video! |
+| [![Image](./Day01_Bonus/assets/thumbnail.jpg)](./Day01/assets/Day01_Bonus.mp4) | [Day 1_Bonus](./Day01_Bonus/)  | [3D-Scanning And Importing Real Scenes Into Gazebo](./Day01_Bonus/README.md) | I got trapped in this rabbit hole: scanning a real scene with Scaniverse, repairing the mesh in Blender and Instant Meshes, making a simplified Collision model in FreeCAD and importing it all into Gazebo |
+| [![Image](./Day02/assets/thumbnail.jpg)](./Day02/assets/Day02.mp4) | [Day 2](./Day02/)  | [How Robotic Systems Communicate And How You Can Listen](./Day02/README.md) |  |
+| [![Image](./Day03/assets/thumbnail.jpg)](./Day03/assets/Day03.mp4) | [Day 3](./Day03/)  | [Robot Eyes Why You Need To See Through Them](./Day03/README.md) | [@JohnVial](https://x.com/JohnVial) |
+| [![Image](./Day04/assets/thumbnail.jpg)](./Day04/assets/Day04.mp4) | [Day 4](./Day04/)  | [Don't Let Your Robot Become Lost - How To Give It A Map](./Day04/README.md) |  |
+| [![Image](./Day05/assets/thumbnail.jpg)](./Day05/assets/Day05.mp4) | [Day 5](./Day05/)  | [Self Driving Robot? How To Make A Robot Autonomous](./Day05/README.md) |  |
+| [![Image](./Day06/assets/thumbnail.jpg)](./Day06/assets/Day06.mp4) | [Day 6](./Day06/)  | [How To Control An Autonomous Robot With Code Instead of A GUI](./Day06/README.md) |  |
+| [![Image](./Day07/assets/thumbnail.jpg)](./Day07/assets/Day07.mp4) | [Day 7](./Day07/)  | [How To Use CAD To Create Custom Robot Links](./Day07/README.md) |  |
+| [![Image](./Day08/assets/thumbnail.jpg)](./Day08/assets/Day08.mp4) | [Day 8](./Day08/)  | [How To Add Your Custom Link To Your Robot](./Day08/README.md) |  |
+| [![Image](./Day09/assets/thumbnail.jpg)](./Day09/assets/Day09.mp4) | [Day 9](./Day09/)  | [3 Steps To Finding Problems To Solve With Wheeled Robots & How To Choose When You Have Too Many](./Day09/README.md) |  |
+| [![Image](./Day10/assets/thumbnail.jpg)](./Day10/assets/Day10.mp4) | [Day 10](./Day10/)  | [How To Control A Robot Arm - The Easy Way](./Day10/README.md) |  |
+| [![Image](./Day11/assets/thumbnail.jpg)](./Day11/assets/Day11.mp4) | [Day 11](./Day11/)  | [7 Useful Commands That Will Let You Interrogate Any ROS 2 System](./Day11/README.md) |  |
+| [![Image](./Day12/assets/thumbnail.jpg)](./Day12/assets/Day12.mp4) | [Day 12](./Day12/)  | [3 Steps To Designing A Simple Gripper In CAD](./Day12/README.md) |  |
+| [![Image](./Day13/assets/thumbnail.jpg)](./Day13/assets/Day13.mp4) | [Day 13](./Day13/)  | [How To Install A Gripper On Your Robot Arm In Simulation](./Day13/README.md) |  |
+| [![Image](./Day14/assets/thumbnail.jpg)](./Day14/assets/Day14.mp4) | [Day 14](./Day14/)  | [How To Setup The ROS2 Standard For Joint Control And How To Control Joints With Code](./Day14/README.md) |  |
+| [![Image](./Day15/assets/thumbnail.jpg)](./Day15/assets/Day15.mp4) | [Day 15](./Day15/)  | [The Easy Way To Setup Your Robot Arm - Configuring MoveIT 2](./Day15/README.md) |  |
+| [![Image](./Day16/assets/thumbnail.jpg)](./Day16/assets/Day16.mp4) | [Day 16](./Day16/)  | [How To Control A Full Robot Arm With Code](./Day16/README.md) |  |
+| [![Image](./Day17/assets/thumbnail.jpg)](./Day17/assets/Day17.mp4) | [Day 17](./Day17/)  | [How To Create A Gazebo World - Adding Something To Pickup](./Day17/README.md) |  |
+| [![Image](./Day18/assets/thumbnail.jpg)](./Day18/assets/Day18.mp4) | [Day 18](./Day18/)  | [How To Stop Your Robot Arm From Hitting Things - Adding Collision Avoidance Sensors To Your Robot Arm](./Day18/README.md) |  |
+| [![Image](./Day19/assets/thumbnail.jpg)](./Day19/assets/Day19.mp4) | [Day 19](./Day19/)  | [How To Find Problems That Robot Arms Can Solve And How To Choose One](./Day19/README.md) |  |
+| [![Image](./Day20/assets/thumbnail.jpg)](./Day20/assets/Day20.mp4) | [Day 20](./Day20/)  | [A Starter Template For Designing Wheel Robots In CAD For ROS](./Day20/README.md) |  |
+| [![Image](./Day21/assets/thumbnail.jpg)](./Day21/assets/Day21.mp4) | [Day 21](./Day21/)  | [3 Things To Consider When Choosing Your Robot Project](./Day21/README.md) |  |
+| [![Image](./Day22/assets/thumbnail.jpg)](./Day22/assets/Day22.mp4) | [Day 22](./Day22/)  | [How To Use Photos To Quickly Create Realistic Robot Models In CAD](./Day22/README.md) |  |
+| [![Image](./Day23/assets/thumbnail.jpg)](./Day23/assets/Day23.mp4) | [Day 23](./Day23/)  | [Exporting Your Robot From FreeCAD And Configuring ROS 2 Control So You Can Teleoperate It](./Day23/README.md) |  |
+| [![Image](./Day24/assets/thumbnail.jpg)](./Day24/assets/Day24.mp4) | [Day 24](./Day24/)  | [3 Tips To Create a compelling an environment for your robot](./Day24/README.md) |  |
+| [![Image](./Day25/assets/thumbnail.jpg)](./Day25/assets/Day25.mp4) | [Day 25](./Day25/)  | [2 Important Sensors To Consider Adding To Your Robot](./Day25/README.md) |  |
+| [![Image](./Day26/assets/thumbnail.jpg)](./Day26/assets/Day26.mp4) | [Day 26](./Day26/)  | [How To Iterate On A Robot Simulation To Make It More Realistic](./Day26/README.md) |  |
+| [![Image](./Day27/assets/thumbnail.jpg)](./Day27/assets/Day27.mp4) | [Day 27](./Day27/)  | [How To Configure Mapping & Navigation So Your Custom Robot Can Drive Itself](./Day27/README.md) |  |
+| [![Image](./Day28/assets/thumbnail.jpg)](./Day28/assets/Day28.mp4) | [Day 28](./Day28/)  | [How To Control Your Custom Robot With Code To Make It Really Autonomous](./Day28/README.md) |  |
 
-## Day 0
-
-Day 0: Setting things up. The challenge's repo  provides a containerized environment very easy to setup. Leveraging WLS, docker and the Dev Containers VS Code extension eliminates the need to fiddle with dual boot, ubuntu or ROS installs version compatibility, or dependencies. 
-
-### Sources
-
-[Course](https://course.becomearoboticist.com/)
-
-[Discord channel](https://discord.gg/WpUGZYqXQN)
-
-### First install
-
-1. Download  [Visual Studio Code](https://code.visualstudio.com/Download) and install it
-2. Download [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) and install it - loong!
-3. In Power Shell install WSL - long, and seems to require admin permissions:
-
-```shell
-> wsl --install
-```
-
-4. Restart the PC for changes to take effect
-
-5. Run Docker (status should show: Engine running)
-
-6. Launch an Ubuntu shell, clone the repo and open VS Code inside the folder
-
-```bash
-> ubuntu
-$ cd ~
-$ git clone https://github.com/johnny555/bar_ws.git
-$ cd bar_ws
-$ code . 
-```
-
-7. Install the Dev Containers VS Code extension
-8. Open `bar_ws` folder in dev container. Ctrl+Caps + P > **Dev Containers: Open Folder in Container**... The first time it takes a very looong time to set up 20Gb of virtual machine
-9. Ctrl+Caps + P > **Run Task** > **Test Gazebo**
-10. In browser, open the GUI: `http://localhost:6080/` and play with Gazebo
-
-### Relaunch
-
-Run Docker  (status should show: Engine running)
-
-Launch VS Code inside the `bar_ws` folder. e.g Open terminal typing `wsl` in the Search bar:
-
-```bash
-$ cd bar_ws
-$ code .
-```
-
-**Reopen** the folder in container (or Ctrl+Caps + P > **Dev Containers: Open Folder in Container**... select `/home/mhered/bar_ws`  )
-
-Ctrl+Caps + P > **Run Task** > **Test Gazebo**
-
-In browser, open: `http://localhost:6080/`
-
-Took actually a couple of days, played a bit with OBS Studio and made a video
-
-### Key learnings
-
-* cool Windows setup using Docker and Dev Containers VS Code extension shows promise 
-* great excuse for a first contact with OBS Studio 
-
-## Kick Off meeting
-
-Works for Nexus
-
-Krytn & MACI Coffee robot
-
-Read "Atomic Habits" James Clear - sprint to change self perception
-
-"show your work" - a record, as a way to appreciate what we learn and get noticed
-
-tag john vial
-
-roughly 1 hour per day then write and share what I learnt for 28 consecutive days
-
-Days 0-9 - Krytn Coffee Robot - standard ROS navigation stack then extend it using FreeCAD (add a tray)
-
-10-19 MACI robot arm - adding collision avoidance. Controlling a robot arm is complicated. Extend it with our own gripper then pick up a can from a tray
-
-20-28 build your own robot - find something relevant to you and simulate it! Will provide templates.
-
-Additional Bonus videos to extend: real robots, frameworks and templates, AI...
-
-Join Discord!
-
-7 daily tasks each week (do the task and post about it)
-
-Play with github copilot can help get unstuck
-
-Copilot
-
-Pearce - Engineering degree. Did robotics without ROS (was extracurricular). Doing PM in navy
-
-11 pax in the cohort
-
-## Day 1
-
-Easy start, teleop using RQT GUI and `teleop_keyboard`
-
-Key learnings: 
-
-* the idea to scan real life environments using a phone app piqued my interest
-
-## Day 2
-
-* can open a terminal inside the docker either through the GUI with terminator or in vscode dev containers clicking on the `+`icon 
-* learnt about vcstool https://github.com/dirk-thomas/vcstool
-
-### Troubleshooting
-
-Krytn teleop task runs but the robot does not move, even though `/cmd_vel` topic has traffic. 
-
-Task throws error "Failed to activate controller":
-
-````bash
-[...]
-[gazebo-1] [ERROR] [1738886097.960364961] [controller_manager]: Switch controller timed out after 5.000000 seconds!
-[spawner-7] [ERROR] [1738886097.962109904] [spawner_joint_state_broadcaster]: Failed to activate controller
-[ERROR] [spawner-7]: process has died [pid 4396, exit code 1, cmd '/opt/ros/jazzy/lib/controller_manager/spawner joint_state_broadcaster diff_drive_base_controller --ros-args'].
-[...]
-````
-
-```bash
-$ ros2 doctor
-[...]
-/opt/ros/jazzy/lib/python3.12/site-packages/ros2doctor/api/topic.py: 42: UserWarning: Publisher without subscriber detected on /diff_drive_base_controller/cmd_vel.
-/opt/ros/jazzy/lib/python3.12/site-packages/ros2doctor/api/topic.py: 42: UserWarning: Publisher without subscriber detected on /dynamic_joint_states.
-/opt/ros/jazzy/lib/python3.12/site-packages/ros2doctor/api/topic.py: 42: UserWarning: Publisher without subscriber detected on /joint_state_broadcaster/transition_event.
-[...]
-/opt/ros/jazzy/lib/python3.12/site-packages/ros2doctor/api/topic.py: 42: UserWarning: Publisher without subscriber detected on /tf.
-/opt/ros/jazzy/lib/python3.12/site-packages/ros2doctor/api/topic.py: 42: UserWarning: Publisher without subscriber detected on /tf_static.
-
-All 5 checks passed
-
-$ ros2 node list
-/controller_manager
-/gz_ros_control
-/joint_state_broadcaster
-/robot_state_publisher
-/ros_gz_bridge
-/rqt_gui_py_node_4393
-/static_transform_publisher_6yXulYBNtRWkegAo
-/twist_stamper
-$ #/diff_drive_base_controller and one additional /static_trasnform_publisher_XXX are missing!
-
-$ros2 topic list
-[...]
-$ #/odom missing!
-```
-
-```bash
-$ ros2 topic echo /cmd_vel
-linear:
-  x: 0.0
-  y: 0.0
-  z: 0.0
-angular:
-  x: 0.0
-  y: 0.0
-  z: -1.21
----
-linear:
-  x: 0.0
-  y: 0.0
-  z: 0.0
-angular:
-  x: 0.0
-  y: 0.0
-  z: -1.21
----
-[...]
-$ ros2 topic info /cmd_vel
-Type: geometry_msgs/msg/Twist
-Publisher count: 1
-Subscription count: 1
-$ 
-```
-
-`/twist_stamper` subscribes to Twist messages in `/cmd_vel` and translates to TwistStamped messages which it publishes on `/diff_drive_base_controller/TwistStamped`  
-
-```bash
-$ros2 interface show geometry_msgs/msg/TwistStamped
-
-```
-
-More intrigued with the docker and devcontainers
-
-![](./assets/krytn_rqt_graph.png)
-
-## Sources
-
-https://www.linkedin.com/posts/ahcorde_ros-ros2-opensource-activity-7291100454443216897-L__N
-
-Insight - a modern, user-friendly GUI for ROS 2
-
-Current GUI Features
-
-The application already supports several core functionalities for interacting with ROS2:
-
- \- Viewing Nodes: Display detailed information about running nodes  (similar to ros2 node list and ros2 node info), including their topics,  services, and more.
-
- \- Viewing Topics: List all topics (similar to ros2 topic list),  inspect details of specific topics (similar to ros2 topic info), and  view message definitions.
-
- \- Viewing Services: List all services (similar to ros2 service  list), inspect specific services (similar to ros2 service info), and  view message definitions.
-
- \- Viewing Actions: List all actions (similar to ros2 action list), inspect specific actions, and view message definitions.
-
- \- Viewing Message Definitions: Access detailed message structures, including raw definitions. This was the first feature developed and the original motivation for creating the GUI.
-
- \- Viewing Transformations (TFs): Visualize all coordinate frames  and calculate transformations between frames (similar to ros2 run  tf2_ros tf2_echo source_link target_link).
-
-Key GUI Features
-
- \- Filtering: Each page includes robust filtering options for quickly finding relevant content.
-
- \- Navigation: User-friendly navigation, no menu bar.
-
- \- Nested Pages: Navigate through nested message definitions.
-
- \- Copy Button: Simply press a button to copy relevant content  (like the command to execute a node, eg. ros2 run turtlesim  turtlesim_node)
-
- \- View Online: See a message definition in the browser.
-
- \- Open folder: Open the folder of a package.
-
-https://github.com/julianmueller/insight_gui
-
-—
-
-https://www.linkedin.com/posts/ahcorde_ros-ros2-network-activity-7288201345226919936-eufA
-
-ros_network_viz This is a utility to visualize the state of an  entire ROS 2 network in a graphical way. This utility will show all of  the nodes in a graph, all of the topics, services, and actions that  connect them, as well as some additional metadata about them.
-
-https://github.com/ros2/ros_network_viz
