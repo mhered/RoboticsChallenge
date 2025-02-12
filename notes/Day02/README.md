@@ -1,9 +1,5 @@
 # Day02 - How Robotic Systems Communicate And How You Can Listen
 
-## Highlights
-
-Day2 brushes up on basic ros2 CLI commands which came actually handy as I spent ages troubleshooting pesky issues that prevented running the Krytn teleop. In the end it had probably been me clumsily touching things from inside and outside the container who caused the problem in the first place. In the meantime, the "Hard way" (running ubuntu "baremetal", no containers) is still not working for me.
-
 ## Intro
 
 * Robot as system of systems: control, perception, navigation, task orchestration, each complex system with subcomponents and all must share info in real time
@@ -29,14 +25,14 @@ $ echo $IGN_GAZEBO_RESOURCE_PATH
 
 ```
 
-* sourcing from outside docker in windows yields the same error message of missing folders. Note:  `.bashrc` does not source for ros jazzy and the workspace (. install/setup.bash) or set variables
+* sourcing from outside docker in windows yields the same error message of missing folders. Note:  `.bashrc` does not source for ros jazzy and the workspace (`. install/setup.bash`) or set variables
 
 * learnt about `vcs` tool https://github.com/dirk-thomas/vcstool to manage version control of multiple repos (??)
 * fun futuristic command prompt: https://github.com/GitSquared/edex-ui
 
 ## Troubleshooting
 
-he refreshenf on ros2 CLI commands was helpful to troubleshoot becasue Krytn teleop task runs but the robot does not move, even though `/cmd_vel` topic has traffic. 
+The refresher on ros2 CLI commands was helpful to troubleshoot because Krytn teleop task runs but the robot does not move, even though `/cmd_vel` topic has traffic. 
 
 Task throws error "Failed to activate controller":
 
@@ -108,9 +104,7 @@ My conclusion after a couple of days struggling:
 
 - Recovered the error by running **purge** + **build** tasks iaw John in the Discord **purge** task deletes `install`and `build` folders and then **build** forces to rebuild and repopulate the folder structure inside the docker which I probably messed up calling colcon from outside the docker in the first place. 
 - Apparently the repo is symlinked so it can be accessed both from inside or outside the container, but the path is different in eahc case.  Worth trying **purge** + **build** to see if this fixes ubuntu
-- may want to add a 3s TimerAction to the `joint_state_broadcaster` spawner in `gazebo.launch.py` as proposed in the Discord by Danial Othman. 
-
-
+- may want to add a 3s `TimerAction` to the `joint_state_broadcaster` spawner in `gazebo.launch.py` as proposed in the Discord by Danial Othman. 
 
 - More and more intrigued with docker and devcontainers
 
@@ -169,3 +163,9 @@ Key GUI Features
 Seen here: https://www.linkedin.com/posts/ahcorde_ros-ros2-network-activity-7288201345226919936-eufA
 
 ros_network_viz This is a utility to visualize the state of an  entire ROS 2 network in a graphical way. This utility will show all of  the nodes in a graph, all of the topics, services, and actions that  connect them, as well as some additional metadata about them.
+
+* https://github.com/dheera/rosboard
+
+ROSboard is a node that turns your robot into a web server to visualize ROS topics
+
+Danial Othman mentioned in the Discord he saw ROSboard in use in the nanosaur project (https://nanosaur.ai/) by Rafaello Bonghi and decided to install it into the BAR container and run it as part of ros2 package.  
