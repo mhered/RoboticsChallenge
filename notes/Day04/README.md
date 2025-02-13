@@ -44,30 +44,48 @@ And a `map_mh.pgm` bitmap file:
 
 ![](./assets/map_mh.jpg)
 
-## Inspecting files from `src/bar_examples/krytn/ `
+## Inspecting files in `src/bar_examples/krytn/ `
 
+### `mapping.launch.py`
 
-
-###  `mapping.launch.py`
-
-launches:
-
-- gazebo with`gazebo.launch.py`  
-- `slam_toolbox` with `mapping.yaml` as config  file
-- `rviz2`with `view.yaml`as config file- Is this an error? Should it be `view.rviz`?
+- includes `gazebo.launch.py`  
+- launches `slam_toolbox` with `mapping.yaml` as config file
+- runs `rviz2`with `view.rivz`as default config - Is `view.yaml`an error?
 
 ### `config/mapping.yaml`
 
 `slam_toolbox` parameters.
 
+mostly default settigns from the library (solver, algorithm etc)
+
 defines the odom, map and base frames, and the scan topic of our robot
 
-other parameters  as starting pose, mode (mapping or navigation) etc
-
-advanced params e.g. solver, algorithm etc
+other setings such as starting pose, mode (mapping or navigation) etc
 
 ###  `gazebo.launch.py`
 
+launches:
 
+- `gazebo_sim` launches the gazebo simulator calling `gz_sim.launch.py` with the path of the world as parameter. `'-r'`to start running the simulation.
+- `robot_state_publisher`  and `robot` are used to spawn the robot in 3 steps: 1) Process the xacro file (`krytn.urdf.xacro`which contains the complete description: geometry, inertias, plugins etc) 2) Create a state publisher node that will start broadcasting joint positions to `/robot_description` (dynamic) and `/tf` (static) and 3) spawns the robot in gazebo
+- `bridge` connects clock and sensors between gazebo and ROS
+- `twist_stamper` the node that timestamps Twist messages
+- `robot_steering` runs the teleop GUI
+- `start_controllers` starts `ros2_control`
+- `static_pub`temporary fix of a bug to rename frame `lidar_2d_link` <> `krytn/base_footprint/lidar_2d_v1`
 
 ### `robot_description/krytn.urdf.xacro`
+
+Complete description of the Krytn robot: geometry, inertias, plugins etc) 
+
+## Running a launch file
+
+All of it can be executed from terminal with:
+
+```bash
+$ source install.setup.bash
+$ ros2 launch krytn mapping.launch.py
+```
+
+But it does not work... The Mapping task does work, though.  What am I missing?
+
