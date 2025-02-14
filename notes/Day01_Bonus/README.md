@@ -10,3 +10,23 @@ Main source is this [tutorial](https://www.youtube.com/watch?v=DgUkGKIJ4wQ).
 6. Export as OBJ and reimport into Blender
 7. Bake the texture in the low poly mesh as explained in the tutorial. Not needed for me as I did not modify the mesh.
 8. Export as DAE 
+
+
+
+made `my_room/` package copying the complete structure in `gamecity/`and replacing references to gamecity by my_room as needed
+
+colcon build
+
+Apparently it is ok, except it works with simple_my_room.dae (made manually in FreeCAD) but not with my_room.dae (scanned with scaniverse). 
+
+```bash
+$ ros2 launch ros_gz_sim gz_sim.launch.py gz_args:=my_room/worlds/simple_my_room.sdf 
+
+$ ros2 launch ros_gz_sim gz_sim.launch.py gz_args:=my_room/worlds/my_room.sdf
+```
+
+
+
+I tried simply rename + copy files  in gamecity/ and it also does not work
+
+To be continued...
