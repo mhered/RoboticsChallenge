@@ -89,3 +89,16 @@ $ ros2 launch krytn mapping.launch.py
 
 But it does not work... The Mapping task does work, though.  What am I missing?
 
+## Playing with sensors
+
+Bonus video: https://youtu.be/6H9SxljrEtg
+
+fiddling with the urdf file that describes de Lidar (`src/bar_examples/sensors/lidar_2d/lidar_2d.urdf.xacro`)
+
+* reduces # of samples to 60, range to +-1 rad, 
+
+* then increases max range from 5 to 20
+* ACTION: try e.g. reducing range and increasing noise 
+
+fiddling with `src/bar_examples/config/diffdrive_control.yaml`to mess with odometry with wrong values for wheel separation and radius
+
