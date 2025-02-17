@@ -57,39 +57,3 @@ Ctrl+Caps + P > **Run Task** > **Test Gazebo**
 In browser, open: `http://localhost:6080/`
 
 Took actually a couple of days, played a bit with OBS Studio and made a video
-
-## Kick Off meeting
-
-Works for Nexus
-
-Krytn & MACI Coffee robot
-
-Read "Atomic Habits" James Clear - sprint to change self perception
-
-"show your work" - a record, as a way to appreciate what we learn and get noticed
-
-tag john vial
-
-roughly 1 hour per day then write and share what I learnt for 28 consecutive days
-
-Days 0-9 - Krytn Coffee Robot - standard ROS navigation stack then extend it using FreeCAD (add a tray)
-
-10-19 MACI robot arm - adding collision avoidance. Controlling a robot arm is complicated. Extend it with our own gripper then pick up a can from a tray
-
-20-28 build your own robot - find something relevant to you and simulate it! Will provide templates.
-
-Additional Bonus videos to extend: real robots, frameworks and templates, AI...
-
-Join Discord!
-
-7 daily tasks each week (do the task and post about it)
-
-Play with github copilot can help get unstuck
-
-Copilot
-
-Pearce - Engineering degree. Did robotics without ROS (was extracurricular). Doing PM in navy
-
-11 pax in the cohort
-
-## 
