@@ -1,5 +1,7 @@
 # Become a roboticist challenge
 
+## Intro
+
 This month I am following [Dr John Vial](https://x.com/johnvial) 's [28-day robotics challenge]( https://becomearoboticist.com/). 
 
 The program blends ideas from [teaching sprints](https://www.teachingsprints.com/), [atomic habits](https://jamesclear.com/atomic-habits-summary), and the [build in public](https://buildinpublic.com/) manifesto. 
@@ -7,6 +9,14 @@ The program blends ideas from [teaching sprints](https://www.teachingsprints.com
 I will document the process and share daily progress updates and key learnings in this repo as well as this [twitter thread](https://x.com/aergenium/status/1888376092571967708) 
 
 Check out also my notes on the [Live Sessions](Live_Sessions.md)
+
+## To Do
+
+- [ ]  investigate the `/slam_toolbox` node using `ros2 note info /slam_toolbox` and see what it is publishing. Maybe there is something you can use there?
+- [ ] fork, symlink or copy `bar_ws` to commit changes
+- [ ] move large files (currently inside `raw_video` folders) somewhere where they will be backed up e.g. in Dropbox 
+
+## The Challenge
 
 | Video | Day  | Title   | Highlights |
 |-------|------|---------|------------|
@@ -19,8 +29,8 @@ Check out also my notes on the [Live Sessions](Live_Sessions.md)
 | [![Image](./notes/Day05/assets/thumbnail.jpg)](./notes/Day05/assets/Day05.mp4) | [Day 5](./notes/Day05/) | [Self Driving Robot? How To Make A Robot Autonomous](./notes/Day05/README.md) | Day 5: ROS2 package Nav2 enables autonomous navigation. Under the hood, a global planner calculates the best route to the goal using a static global costmap, and a local planner constantly scans for obstacles near the robot in a local costmap, and updates the path to avoid surprises. |
 | [![Image](./notes/Day06/assets/thumbnail.jpg)](./notes/Day06/assets/Day06_final.mp4) | [Day 6](./notes/Day06/) | [How To Control An Autonomous Robot With Code Instead Of A GUI](./notes/Day06/README.md) | Day 6 - we wrote a ROS2 Python node to publish directly to `/goal_pose` instead of manually clicking to choose a destination. Useful e.g. for docking the robot, although in practice it'll need much more refinement - actions, waypoints, sensors etc. Started to explore waypoints but had to move on. |
 | [![Image](./notes/Day07/assets/thumbnail.jpg)](./notes/Day07/assets/Day07.mp4) | [Day 7](./notes/Day07/) | [How To Use CAD To Create Custom Robot Links](./notes/Day07/README.md) | Day 7 - sketching a simple accessory for the robot in FreeCAD. The course touches on sketching over images/drawings, thinking pads and pockets, and keeping the model simple. From experience, I would add: using repositories of 3D models for components such as GrabCAD, and exporting the simplified model to STL. |
-| [![Image](./notes/Day08/assets/thumbnail.gif)](./notes/Day08/assets/Day08.mp4) | [Day 8](./notes/Day08/) | [How To Add Your Custom Link To Your Robot](./notes/Day08/README.md) | Day 8 - I finally could give the CROSS FreeCAD workbench a try today, and I am impressed. Just the GUI interface to determine frame of reference transforms for joints and links and the 1-click export for a full robot description package make it well worth the setup effort. Another highlight was the URDF/xacro walkthrough and troubleshooting tips. O!, And my Krytn robot is happily driving around with a shiny new tray. |
-| [![Image](./notes/Day09/assets/thumbnail.jpg)](./notes/Day09/assets/Day09.mp4) | [Day 9](./notes/Day09/) | [3 Steps To Finding Problems To Solve With Wheeled Robots & How To Choose When You Have Too Many](./notes/Day09/README.md) |  |
+| [![Image](./notes/Day08/assets/thumbnail.gif)](./notes/Day08/assets/Day08.mp4) | [Day 8](./notes/Day08/) | [How To Add Your Custom Link To Your Robot](./notes/Day08/README.md) | Day 8 - I finally could give the CROSS FreeCAD workbench a try today, and I am impressed. Just the GUI interface to determine frame of reference transforms for joints and links and the 1-click export for a full robot description package make it well worth the setup effort. Another highlight was the URDF/xacro walkthrough and troubleshooting tips. Oh, and my Krytn robot is happily driving around with a shiny new tray. |
+| [![Image](./notes/Day09/assets/thumbnail.jpg)](https://youtu.be/tWYqNRaFAnk) | [Day 9](./notes/Day09/) | [3 Steps To Finding Problems To Solve With Wheeled Robots & How To Choose When You Have Too Many](./notes/Day09/README.md) | Day 9 - the task today was to research on configurations and applications of wheeled robots. I got so carried away I ended up making a long(ish)  video and uploaded it to Youtube. |
 | [![Image](./notes/Day10/assets/thumbnail.jpg)](./notes/Day10/assets/Day10.mp4) | [Day 10](./notes/Day10/) | [How To Control A Robot Arm - The Easy Way](./notes/Day10/README.md) |  |
 | [![Image](./notes/Day11/assets/thumbnail.jpg)](./notes/Day11/assets/Day11.mp4) | [Day 11](./notes/Day11/) | [7 Useful Commands That Will Let You Interrogate Any ROS 2 System](./notes/Day11/README.md) |  |
 | [![Image](./notes/Day12/assets/thumbnail.jpg)](./notes/Day12/assets/Day12.mp4) | [Day 12](./notes/Day12/) | [3 Steps To Designing A Simple Gripper In CAD](./notes/Day12/README.md) |  |
