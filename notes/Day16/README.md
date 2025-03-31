@@ -3,8 +3,13 @@
 ## Task
 
 1. Copy`src/bar_examples/maci/maci/arm.py` into `src/my_robot_arm/my_robot_arm/arm.py`
+
+   Note this example makes use of the library [pymoveit2](https://github.com/AndrejOrsula/pymoveit2)
+
 2. in `arm.py` adjust the call to the `MoveIT2` node with `end_effector_name='gripper'` and `group_name ='arm'`
+
 3. Modify the code to move the arm to a target joint position after moving to the home configuration. 
+
 4. Launch the `my_robot_arm_Gazebo` task, move the arm manually to the desired goal and Execute while listening to the `/joint_states` topic with `$ ros2 topic echo /joint_states` to find out the joint positions of the goal state: 
    ```bash
    ---
@@ -60,6 +65,7 @@
        1.7440586090239478e-13
    ]
    ```
+
 5. In `src/my_robot_arm/CMakeLists.txt` install `arm.py` as a program that can be run:
 
 ```cmake
@@ -76,5 +82,5 @@ install(PROGRAMS
 
 Success!!
 
-![](./assets/Day16_teaser.gif)
+![](./assets/thumbnail.gif)
 
