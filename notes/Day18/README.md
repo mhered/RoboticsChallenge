@@ -195,5 +195,5 @@ To updating the following section in `my_robot_arm_moveit/config/my_robot_arm.sr
 
 Next steps: 
 
-- [ ] improve the gripper (the gap it too large in Closed position and the can of Coke slips) > Fixed with: created v3 CAD model with bigger radius, replaced .dae mesh files in repo.
+- [x] improve the gripper (the gap it too large in Closed position and the can of Coke slips) > Fixed with: created v3 CAD model with bigger radius, replaced .dae mesh files in repo.
 - [ ] automate with vision (!!)
